@@ -1,0 +1,20 @@
+Simple Description: create a web page that allows users to transfer any crypto currency items/tokens, but only on certain networks
+
+Detailed Description:
+
+Create a web page that has the following features:
+1. allow user to connect a metamask wallet (or other compatible wallet)
+2. ONLY when a wallet is connected the user may select which item to transfer (contract address, item ID (ONLY for ERC-721 and ERC-1155), amount (ONLY for ERC-20, and ERC-1155)), and the destination address
+  - Optional: automatically detect the token standard. If you don't do this you must allow the user to specify the standard
+  - Optional: dispaly the user's current balance of the selected token
+3. Call the transfer function of the token to complete the transfer
+
+Only support the following networks:
+ - Polygon
+ - BSC
+ - Rinkeby
+ 
+If the user is not connected to one of these networks, inform them of the compatible networks and do not let them transfer any items.
+(Optional: include buttons to switch to one of the supported networks)
+
+All necessary ABIs are included in index.js (ERC20Abi, ERC721Abi, ERC1155Abi)
